@@ -37,7 +37,7 @@ log_error()   { printf "${RED}[ER] %s${RESET}\n" "$1"; }
 
 print_banner() {
     clear
-    printf "${blue}##################################################\n"
+printf "${blue}##################################################\n"
 printf "${blue}##                                              ##\n"
 printf "${blue}##        888888888888  88888888888  88      88 ##\n"
 printf "${blue}##             88      88         88  88    88  ##\n"
