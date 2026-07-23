@@ -63,6 +63,20 @@ sudo su
 ```bash
 kali
 ```
+
+```bash
+# 1. Purani symlink file ko remove karein
+sudo rm -f /etc/resolv.conf
+
+# 2. Apni pasand ka custom DNS add karein (Cloudflare & Google)
+echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
+echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
+
+# 3. File ko immutable (lock) kar dein taaki apt update ya systemd ise change na kar sake
+sudo chattr +i /etc/resolv.conf
+```
+
+
 ##Kali Update And Upgrade Command
 
 ```bash
