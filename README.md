@@ -58,6 +58,7 @@ sudo su
 kali
 ```
 
+## Mandatory Step
 ```bash
 ## ⚠️ Mandatory Step: Fix DNS (Required for Update/Upgrade)
 
