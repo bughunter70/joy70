@@ -65,15 +65,23 @@ kali
 ```
 
 ```bash
-# 1. Purani symlink file ko remove karein
+## ⚠️ Mandatory Step: Fix DNS (Required for Update/Upgrade)
+
+Kali PRoot environment me `apt update` aur `apt upgrade` ko sahi se kaam karne ke liye **DNS fix karna compulsory (zaroori) hai**. Agar aap yeh commands run nahi karenge, toh package updates fail ho sakte hain.
+
+Kali Linux terminal ke andar log in hone ke baad yeh commands run karein:
+
+```bash
+# Purani resolv.conf symlink remove karein
 sudo rm -f /etc/resolv.conf
 
-# 2. Apni pasand ka custom DNS add karein (Cloudflare & Google)
+# Custom DNS add karein (Cloudflare & Google)
 echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 
-# 3. File ko immutable (lock) kar dein taaki apt update ya systemd ise change na kar sake
+# File ko lock karein taaki update ke dauran overwrite na ho
 sudo chattr +i /etc/resolv.conf
+
 ```
 
 
