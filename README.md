@@ -67,21 +67,20 @@ kali
 ```bash
 ## ⚠️ Mandatory Step: Fix DNS (Required for Update/Upgrade)
 
-Kali PRoot environment me `apt update` aur `apt upgrade` ko sahi se kaam karne ke liye **DNS fix karna compulsory (zaroori) hai**. Agar aap yeh commands run nahi karenge, toh package updates fail ho sakte hain.
+In the Kali PRoot environment, **fixing the DNS configuration is compulsory** for `apt update` and `apt upgrade` to function properly. Without this step, package updates will fail.
 
-Kali Linux terminal ke andar log in hone ke baad yeh commands run karein:
+Run the following commands inside your Kali Linux terminal:
 
 ```bash
-# Purani resolv.conf symlink remove karein
+# Remove old resolv.conf symlink
 sudo rm -f /etc/resolv.conf
 
-# Custom DNS add karein (Cloudflare & Google)
+# Add custom DNS resolvers (Cloudflare & Google)
 echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 
-# File ko lock karein taaki update ke dauran overwrite na ho
+# Lock file to prevent overwriting during updates
 sudo chattr +i /etc/resolv.conf
-
 ```
 
 
