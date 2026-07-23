@@ -45,12 +45,6 @@ chmod +x kali.sh
 ## Start Kali
 
 ```bash
-nethunter
-```
-
-or
-
-```bash
 nh
 ```
 ##Kali Root Login
