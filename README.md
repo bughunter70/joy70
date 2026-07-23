@@ -47,12 +47,12 @@ chmod +x kali.sh
 ```bash
 nh
 ```
-##Kali Root Login
+## Kali Root Login
 
 ```bash
 sudo su
 ```
-##Password For Kali
+## Password For Kali
 
 ```bash
 kali
@@ -78,12 +78,12 @@ sudo chattr +i /etc/resolv.conf
 ```
 
 
-##Kali Update And Upgrade Command
+## Kali Update And Upgrade Command
 
 ```bash
 apt update && sudo apt full-upgrade -y
 ```
-##Kali All tools Installation Command
+## Kali All tools Installation Command
 
 ```bash
 apt install kali-linux-default -y
