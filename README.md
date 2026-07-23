@@ -77,12 +77,23 @@ echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 sudo chattr +i /etc/resolv.conf
 ```
 
-
 ## Kali Update And Upgrade Command
 
 ```bash
 apt update && sudo apt full-upgrade -y
 ```
+
+# Finish setting up any unconfigured packages
+sudo dpkg --configure -a
+
+# Attempt another fix-broken install in case anything was missed
+sudo apt --fix-broken install
+
+# Clean up those unused dependencies APT mentioned in your output
+sudo apt autoremove
+
+
+
 ## Kali All tools Installation Command
 
 ```bash
