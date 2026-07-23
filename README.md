@@ -29,19 +29,19 @@ pkg install git curl nano -y
 ## Download Installer
 
 ```bash
-wget -O install-nethunter-termux https://offs.ec/2MceZWr
+wget https://raw.githubusercontent.com/bughunter70/joy70/main/kali.sh
 ```
 
 ## Give Permission
 
 ```bash
-chmod +x install-nethunter-termux
+chmod +x kali.sh
 ```
 
 ## Install Kali NetHunter
 
 ```bash
-./install-nethunter-termux
+./kali.sh
 ```
 
 ## Start Kali
