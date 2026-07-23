@@ -1,6 +1,4 @@
-# kali-linux
-
-# Kali Linux NetHunter (Termux)
+# Kali Linux Latest Version 2026.7 (Termux)
 
 ## Requirements
 - Android 8+
@@ -38,7 +36,7 @@ wget https://raw.githubusercontent.com/bughunter70/joy70/main/kali.sh
 chmod +x kali.sh
 ```
 
-## Install Kali NetHunter
+## Install Kali
 
 ```bash
 ./kali.sh
@@ -54,4 +52,24 @@ or
 
 ```bash
 nh
+```
+##Kali Root Login
+
+```bash
+sudo su
+```
+##Password For Kali
+
+```bash
+kali
+```
+##Kali Update And Upgrade Command
+
+```bash
+apt update && sudo apt full-upgrade -y
+```
+##Kali All tools Installation Command
+
+```bash
+apt install kali-linux-default -y
 ```
